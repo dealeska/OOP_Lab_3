@@ -1,0 +1,17 @@
+D:\С#\OOP_Lab_2\OOP_Lab_2\bin\Debug\OOP_Lab_2.exe.config
+D:\С#\OOP_Lab_2\OOP_Lab_2\bin\Debug\OOP_Lab_2.exe
+D:\С#\OOP_Lab_2\OOP_Lab_2\bin\Debug\OOP_Lab_2.pdb
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.csprojAssemblyReference.cache
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\App.g.cs
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2_MarkupCompile.cache
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2_MarkupCompile.lref
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.g.resources
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.Properties.Resources.resources
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.csproj.GenerateResource.cache
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.csproj.CoreCompileInputs.cache
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.exe
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\OOP_Lab_2.pdb
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\EndWindow.g.cs
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\MainWindow.g.cs
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\EndWindow.baml
+D:\С#\OOP_Lab_2\OOP_Lab_2\obj\Debug\MainWindow.baml
