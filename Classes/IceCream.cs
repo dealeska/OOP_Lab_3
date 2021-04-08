@@ -9,6 +9,7 @@ namespace OOP_Lab_1
 
         public IceCream(Int32 delivery, bool extraFood, bool taste) : base(delivery, extraFood)
         {
+            Name = "IceCream";
             Image = "D:/С#/OOP_Lab_2/OOP_Lab_2/Resourses/IceCream.jpg";
             switch (taste)
             {

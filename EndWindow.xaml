@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Lab_2"
         mc:Ignorable="d"
-        Title="Order" Height="408.4" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Order" Height="415.4" Width="900" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="btPay">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" Margin="28,39,25.6,131.4"/>
+        <ListBox x:Name="listBox" Margin="28,39,198.6,119.4" Height="210"/>
         <Label x:Name="lOrder" Content="Your order:" HorizontalAlignment="Left" Margin="28,8,0,0" VerticalAlignment="Top" Width="264" FontSize="15" FontFamily="Square721 BT" FontWeight="Bold" FontStyle="Italic" Height="29"/>
-        <Label x:Name="lCost" Content="All cost:" HorizontalAlignment="Left" Margin="37,264,0,0" VerticalAlignment="Top" Width="109" FontSize="15" FontFamily="Square721 BT" FontWeight="Bold" FontStyle="Italic" Height="29"/>
-        <TextBlock x:Name="tCost" HorizontalAlignment="Left" Margin="118,268,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="22" Width="112" FontSize="16" RenderTransformOrigin="0.561,-1.486"/>
-        <Button Content="Оплатить" HorizontalAlignment="Left" Margin="259,309,0,0" VerticalAlignment="Top" Width="250" Click="Button_Click_1" Height="50" FontSize="20" FontFamily="Square721 BT" FontWeight="Bold" FontStyle="Italic"/>
-        <Button x:Name="btDelete" Content="Button" HorizontalAlignment="Left" Margin="602,329,0,0" VerticalAlignment="Top" Width="75" Click="btDelete_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="37,329,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="155,329,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="230,264,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+        <Label x:Name="lCost" Content="All cost:" HorizontalAlignment="Left" Margin="37,272,0,0" VerticalAlignment="Top" Width="109" FontSize="15" FontFamily="Square721 BT" FontWeight="Bold" FontStyle="Italic" Height="29"/>
+        <Button Content="Pay" HorizontalAlignment="Left" Margin="201,309,0,0" VerticalAlignment="Top" Width="250" Click="btPay_Click" Height="50" FontSize="20" FontFamily="Square721 BT" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="btDelete" Content="Delete" HorizontalAlignment="Left" Margin="610,329,0,0" VerticalAlignment="Top" Width="164" Click="btDelete_Click" Height="39" FontSize="14"/>
+        <Button x:Name="btSerialization" Content="Serialization" HorizontalAlignment="Left" Margin="712,39,0,0" VerticalAlignment="Top" Width="164" Click="btSerialization_Click" Height="39" FontSize="14"/>
+        <Button x:Name="btBinDeserialization" Content="BinDeserialization" HorizontalAlignment="Left" Margin="712,94.781,0,0" VerticalAlignment="Top" Width="164" Click="btBinDeserialization_Click" Height="39" UseLayoutRounding="False" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextOptions.TextFormattingMode="Display" MinWidth="17" Padding="0,1,1,1" FontSize="14"/>
+        <Button x:Name="btXmlDeserialization" Content="XmlDeserialization" HorizontalAlignment="Left" Margin="712,150,0,0" VerticalAlignment="Top" Width="164" Click="btXmlDeserialization_Click" Height="39" FontSize="14"/>
+        <Button x:Name="btAdd" Content="Add" HorizontalAlignment="Left" Margin="513,284,0,0" VerticalAlignment="Top" Width="164" Click="btAdd_Click" Height="39" FontSize="14"/>
+        <Button x:Name="btChange" Content="Change" HorizontalAlignment="Left" Margin="701,284,0,0" VerticalAlignment="Top" Width="164" Click="btChange_Click" Height="39" FontSize="14"/>
+        <Label x:Name="lCost1" Content="" HorizontalAlignment="Left" Margin="112,272,0,0" VerticalAlignment="Top" Width="155" Height="29" FontSize="14"/>
     </Grid>
 </Window>

@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Xml.Serialization;
 
 
 namespace OOP_Lab_2
@@ -13,80 +10,102 @@ namespace OOP_Lab_2
     /// </summary>  
     public partial class EndWindow : Window
     {
-        public List<OOP_Lab_1.MenuItem> orderList = new List<OOP_Lab_1.MenuItem>();
+        private List<OOP_Lab_1.MenuItem> orderList = new List<OOP_Lab_1.MenuItem>();
         private List<string> imageList = new List<string>();
-        BinaryFormatter formatter = new BinaryFormatter();
-        XmlSerializer formattr = new XmlSerializer(typeof(List<OOP_Lab_1.MenuItem>));
+        private List<Factory> factoryList = new List<Factory>();
 
-        public EndWindow(List<OOP_Lab_1.MenuItem> item, List<string> image)
+        public EndWindow(List<OOP_Lab_1.MenuItem> item, List<string> image, List<Factory> factoryList)
         {
             InitializeComponent();
             this.orderList = item;
             this.imageList = image;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(1);
+            this.factoryList = factoryList;
         }
 
         private void btDelete_Click(object sender, RoutedEventArgs e)
         {
             imageList.RemoveAt(listBox.SelectedIndex);
             orderList.RemoveAt(listBox.SelectedIndex);
-            listBox.Items.RemoveAt(listBox.SelectedIndex);
-            listBox.Items.Clear();
+            PlayWithLists.CreateOrderList(this, orderList, imageList);
+        }        
+
+        private void btAdd_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow(factoryList, orderList, imageList);
+            window.Show();
+            Close();
+        }       
+
+        private void btChange_Click(object sender, RoutedEventArgs e)
+        {
+            for (Int32 i = 0; i < factoryList.Count; i++)
+            {
+                if (factoryList[i].Name.IsEqual(orderList[listBox.SelectedIndex].Name))
+                {
+                    EditWindow window = new EditWindow(this, factoryList, imageList, orderList, listBox.SelectedIndex);
+                    FillEditWindow(window, i);
+                }
+            }
+        }
+
+        private void btXmlDeserialization_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeOrderList(Deserialization.XmlDeserialize("order.xml"));
+        }
+
+        private void btBinDeserialization_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeOrderList(Deserialization.BinDeserialize("order.dat"));
+        }
+
+        private void btSerialization_Click(object sender, RoutedEventArgs e)
+        {
+            Serialization.BinSerialize("order.dat", orderList);
+            Serialization.XMLSerialize("order.xml", orderList);            
+        }
+
+        private void btPay_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+        private void ChangeOrderList(List<OOP_Lab_1.MenuItem> order)
+        {
+            imageList.Clear();
+            orderList.Clear();
+            for (Int32 i = 0; i < order.Count; i++)
+            {
+                imageList.Add(order[i].Image);
+                orderList.Add(order[i]);
+            }
             PlayWithLists.CreateOrderList(this, orderList, imageList);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void FillEditWindow(EditWindow wnd, Int32 index)
         {
-                        
-            using (FileStream fs = new FileStream("order.dat", FileMode.OpenOrCreate))
-            {
-                formatter.Serialize(fs, orderList);
-            }
+            string[] questions = factoryList[index].AskClient();
+            string[] answers1 = factoryList[index].Answer1();
 
-            
+            wnd.lEditParams1.Content = questions[0];
+            for (Int32 j = 0; j < answers1.Length; j++)
+                wnd.AboutMenu1.Items.Add(answers1[j]);
 
-            using (FileStream fs = new FileStream("people.xml", FileMode.Create))
-            {
-                formattr.Serialize(fs, orderList);
-            }
+            wnd.lEditParams2.Content = questions[1];
+            string[] answers2 = factoryList[index].Answer2();
 
-        }
+            for (Int32 j = 0; j < answers2.Length; j++)
+                wnd.AboutMenu2.Items.Add(answers2[j]);
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            using (FileStream fs = new FileStream("order.dat", FileMode.OpenOrCreate))
-            {
-                List<OOP_Lab_1.MenuItem> newPerson = (List<OOP_Lab_1.MenuItem>)formatter.Deserialize(fs);
-                listBox.Items.Clear();
-                for (Int32 i = 0; i < newPerson.Count; i++)
-                {
-                    imageList.Add(newPerson[i].Image);
-                    orderList.Add(newPerson[i]);
-                }
-                PlayWithLists.CreateOrderList(this, orderList, imageList);
-            }
+            wnd.AboutMenu1.Text = wnd.AboutMenu1.Items[(Int32)factoryList[index].answers[0]].ToString();
+            wnd.AboutMenu2.Text = (string)wnd.AboutMenu2.Items[(bool)factoryList[index].answers[2] ? 0 : 1];
 
-        }
+            if ((bool)factoryList[index].answers[1])
+                wnd.Choose1.IsChecked = true;
+            else wnd.Choose2.IsChecked = true;
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            using (FileStream fs = new FileStream("people.xml", FileMode.OpenOrCreate))
-            {
-                List<OOP_Lab_1.MenuItem> newPerson = (List<OOP_Lab_1.MenuItem>)formattr.Deserialize(fs);
-                listBox.Items.Clear();
-                imageList.Clear();
-                orderList.Clear();
-                for (Int32 i = 0; i < newPerson.Count; i++)
-                {
-                    imageList.Add(newPerson[i].Image);
-                    orderList.Add(newPerson[i]);
-                }
-                PlayWithLists.CreateOrderList(this, orderList, imageList);
-            }
+            wnd.lName.Content += factoryList[index].Name;
+
+            wnd.Show();
         }
     }
 }

@@ -35,7 +35,7 @@
         <Button x:Name="btOrder" Content="Order" HorizontalAlignment="Left" Margin="66,410,0,0" VerticalAlignment="Top" Width="121" Height="38" FontSize="18" FontFamily="Swis721 Blk BT" FontWeight="Bold" FontStyle="Italic" Click="btOrder_Click"/>
         <ComboBox x:Name="AboutMenu2" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Width="226" Height="27"/>
         <Label x:Name="lEditParams2" Content="" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" Width="349" FontSize="14" FontStyle="Italic" Grid.ColumnSpan="2"/>
-        <Label x:Name="lisAdd" Content="Добавлено" HorizontalAlignment="Left" Margin="35.4,410,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1" FontSize="14" Foreground="#FF83DD37"/>
+        <Label x:Name="lisAdd" Content="Добавлено" HorizontalAlignment="Left" Margin="35.4,410,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1" FontSize="16" Foreground="#FF478216" FontWeight="Bold"/>
 
     </Grid>
 </Window>

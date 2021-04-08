@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Saving\Deserialization.cs" />
+    <Compile Include="EditWindow.xaml.cs">
+      <DependentUpon>EditWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FactoryMetods\CakeFactory.cs" />
     <Compile Include="Classes\Cake.cs" />
     <Compile Include="Classes\ColdDrink.cs" />
@@ -67,9 +71,15 @@
     <Compile Include="FactoryMetods\HotDrinkFactory.cs" />
     <Compile Include="FactoryMetods\IceCreamFactory.cs" />
     <Compile Include="FactoryMetods\Factory.cs" />
-    <Compile Include="PlayWithLists.cs" />
-    <Compile Include="StringExtentions.cs" />
+    <Compile Include="Saving\Information.cs" />
+    <Compile Include="HelpClasses\PlayWithLists.cs" />
+    <Compile Include="Saving\Serialization.cs" />
+    <Compile Include="HelpClasses\StringExtentions.cs" />
     <Compile Include="Types\Types.cs" />
+    <Page Include="EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EndWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

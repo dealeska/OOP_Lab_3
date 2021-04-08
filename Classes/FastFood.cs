@@ -10,6 +10,7 @@ namespace OOP_Lab_1
 
         public FastFood(Int32 gloves, bool extraFood, bool napkin)
         {
+            Name = "FastFood";
             Image = "D:/С#/OOP_Lab_2/OOP_Lab_2/Resourses/FastFood.jpg";
             this.Gloves = !Convert.ToBoolean(gloves);
             if (Gloves)

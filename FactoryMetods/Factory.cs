@@ -7,6 +7,7 @@ namespace OOP_Lab_2
     {
         public string Name { get; protected set; }
         public string Image { get; protected set; }
+        public object[] answers = { 1, true, true };
 
         public abstract MenuItem Create(params Object[] args);
 

@@ -1,0 +1,26 @@
+﻿<Window x:Class="OOP_Lab_2.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_Lab_2"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="360" Width="260" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="172*"/>
+            <ColumnDefinition Width="81*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lEditMenu" Content="Complete the order" HorizontalAlignment="Left" Margin="10,35,-105.4,0" VerticalAlignment="Top" Width="349" FontSize="15" FontFamily="Swis721 Blk BT" FontWeight="Bold" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="AboutMenu1" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="226" Height="27" Grid.ColumnSpan="2"/>
+        <DockPanel x:Name="pRadioButton" HorizontalAlignment="Left" Height="36" LastChildFill="False" Margin="10,247,0,0" VerticalAlignment="Top" Width="226" Grid.ColumnSpan="2">
+            <RadioButton x:Name="Choose1" Content="Take away" Height="29" VerticalAlignment="Top" Width="113" FontSize="14"/>
+            <RadioButton x:Name="Choose2" Content="Take here" Height="29" VerticalAlignment="Top" Width="113" FontSize="14"/>
+        </DockPanel>
+        <Label x:Name="lEditParams1" Content="" HorizontalAlignment="Left" Margin="10,67,-105.4,0" VerticalAlignment="Top" Width="349" FontSize="14" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="AboutMenu2" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" Width="226" Height="27" Grid.ColumnSpan="2"/>
+        <Label x:Name="lEditParams2" Content="" HorizontalAlignment="Left" Margin="10,155,-105.4,0" VerticalAlignment="Top" Width="349" FontSize="14" FontStyle="Italic" Grid.ColumnSpan="2"/>
+        <Button Content="Done" HorizontalAlignment="Left" Margin="74,283,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" Height="28" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label x:Name="lName" Content="You choose: " HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="192" FontSize="14" FontWeight="Bold" FontStyle="Italic" FontFamily="Swis721 BT" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

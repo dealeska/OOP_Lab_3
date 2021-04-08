@@ -9,6 +9,7 @@ namespace OOP_Lab_1
 
         public Drink(Int32 capacity, bool extraFood)
         {
+            Name = "Drink";
             this.ExtraFood = extraFood;            
             switch (capacity)
             {

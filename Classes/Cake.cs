@@ -10,6 +10,7 @@ namespace OOP_Lab_1
         public bool Raisins { get; set; }
         public Cake(Int32 delivery, bool extraFood, bool raisins) : base(delivery, extraFood)
         {
+            Name = "Cake";
             Image = "D:/С#/OOP_Lab_2/OOP_Lab_2/Resourses/Cake.jpg";
             this.Raisins = raisins;
             if (Raisins)

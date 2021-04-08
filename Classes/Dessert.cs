@@ -10,6 +10,7 @@ namespace OOP_Lab_1
         public TDelivery Delivery { get; set; }
         public Dessert(Int32 delivery, bool extraFood)
         {
+            Name = "Dessert";
             this.ExtraFood = extraFood;            
             switch (delivery)
             {

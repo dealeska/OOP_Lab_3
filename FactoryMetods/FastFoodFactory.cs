@@ -14,6 +14,7 @@ namespace OOP_Lab_2
 
         public override MenuItem Create(params object[] args)
         {
+            answers = args;
             return new FastFood((Int32)args[0], (bool)args[1], (bool)args[2]);
         }
 

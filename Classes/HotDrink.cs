@@ -8,6 +8,7 @@ namespace OOP_Lab_1
         public bool sugar { get; set; }        
         public HotDrink(Int32 capacity, bool extraFood, bool sugar) : base(capacity, extraFood)
         {
+            Name = "HotDrink";
             Image = "D:/С#/OOP_Lab_2/OOP_Lab_2/Resourses/HotDrink.jpg";
             this.sugar = sugar;
             if (sugar)

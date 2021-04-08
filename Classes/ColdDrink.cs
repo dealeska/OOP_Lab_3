@@ -9,6 +9,7 @@ namespace OOP_Lab_1
 
         public ColdDrink(Int32 capacity, bool extraFood, bool ice) : base(capacity, extraFood)
         {
+            Name = "ColdDrink";
             Image = "D:/С#/OOP_Lab_2/OOP_Lab_2/Resourses/ColdDrink.jpg";
             this.Ice = ice;
             if (Ice)

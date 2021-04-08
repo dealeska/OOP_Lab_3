@@ -11,6 +11,7 @@ namespace OOP_Lab_1
         public float Cost { get; set; }
         public bool ExtraFood { get; set; }
         public string Image { get; set; }
+        public string Name { get; set; }
 
         static MenuItem()
         {
