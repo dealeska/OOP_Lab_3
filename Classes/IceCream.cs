@@ -25,7 +25,9 @@ namespace OOP_Lab_1
                     this.Taste = TTaste.vanilla;
                     break;
             }
-        }       
+        }
+
+        public IceCream() { }
 
         public override string WriteDescription()
         {

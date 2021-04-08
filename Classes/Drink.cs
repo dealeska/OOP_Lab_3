@@ -31,6 +31,8 @@ namespace OOP_Lab_1
             }
         }
 
+        public Drink() { }
+
         public override string WriteDescription()
         {
             return $"You choose a drink {Capacity} capacity " +

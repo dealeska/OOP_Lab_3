@@ -14,6 +14,7 @@ namespace OOP_Lab_1
             if (Ice)
                this.Cost += 10;
         }
+        public ColdDrink() { }
 
         public override string WriteDescription()
         {           

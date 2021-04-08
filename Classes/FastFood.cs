@@ -21,7 +21,9 @@ namespace OOP_Lab_1
             if (Napkin)
                 this.Cost += 10;
             this.ExtraFood = extraFood;
-        }      
+        }
+
+        public FastFood() { }
 
         public override string WriteDescription()
         {

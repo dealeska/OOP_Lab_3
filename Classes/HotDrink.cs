@@ -13,6 +13,8 @@ namespace OOP_Lab_1
             if (sugar)
                 this.Cost += 10;
         }
+
+        public HotDrink() { }
       
         public override string WriteDescription()
         {
